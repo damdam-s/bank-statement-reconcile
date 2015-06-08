@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-from openerp import models, fields, api
+from openerp import models, api
 
 
 class account_statement_from_invoice_lines(models.TransientModel):
@@ -36,12 +36,12 @@ class account_statement_from_invoice_lines(models.TransientModel):
         super(account_statement_from_invoice_lines, self).populate_statement()
         bank_statement_obj = self.env['account.bank.statement']
         statement_id = self._context.get('statement_id', False)
-        
+
         if statement_id:
             statement = bank_statement_obj.browse(statement_id)
             for line in statement.line_ids:
                 line.write({'name': line.ref, 'ref': line.name})
-                
+
         return {'type': 'ir.actions.act_window_close'}
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

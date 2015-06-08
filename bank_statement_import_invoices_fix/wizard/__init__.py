@@ -19,4 +19,4 @@
 #
 ##############################################################################
 
-from . import wizard
+from . import account_statement_from_invoice
