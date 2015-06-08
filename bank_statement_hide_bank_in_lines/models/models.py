@@ -18,10 +18,3 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-from openerp import models, fields, api
-
-# class test_template_module(models.Model):
-#     _name = 'test_template_module.test_template_module'
-
-#     name = fields.Char()

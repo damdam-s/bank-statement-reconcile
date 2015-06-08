@@ -26,8 +26,8 @@
     'license': 'AGPL-3',
     'website': 'http://www.camptocamp.com',
     'data': [
-             'security/account_security.xml',
-             'views/bank_statement_hide_bank_in_lines_view.xml'
+        'security/account_security.xml',
+        'views/bank_statement_hide_bank_in_lines_view.xml'
     ],
     'installable': True,
     'auto_install': False,
