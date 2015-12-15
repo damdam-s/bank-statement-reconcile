@@ -21,7 +21,7 @@
 from openerp import models, fields, api
 
 
-class AccountConfigSettings(orm.TransientModel):
+class AccountConfigSettings(models.TransientModel):
     _inherit = 'account.config.settings'
 
     reconciliation_commit_every = fields.Integer(
@@ -43,10 +43,10 @@ class AccountConfigSettings(orm.TransientModel):
         return result
 
 
-class Company(orm.Model):
+class Company(models.Model):
     _inherit = "res.company"
 
     reconciliation_commit_every = fields.Integer(
-            string="How often to commit when performing automatic "
-                   "reconciliation.",
-            help="Leave zero to commit only at the end of the process.")
+        string="How often to commit when performing automatic "
+               "reconciliation.",
+        help="Leave zero to commit only at the end of the process.")
